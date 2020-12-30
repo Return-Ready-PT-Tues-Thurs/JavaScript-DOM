@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="content"><img id="myimg" src="images/catpic.jpg"/></p>
+
+    <button id="myBtn2">Try it</button>
+
+    <p id="demo"></p>
+    <button id="myBtn">Try it</button>
+
+    <script>
+        document.getElementById("myBtn").addEventListener("click", displayScript);
+
+        function displayScript() {
+
+            var content = "We are coders!"
+            document.getElementById("demo").innerHTML = content;
+            document.getElementById('demo').style.color ="blue";
+            document.getElementById('demo').style.fontSize = '40px';
+
+        }
+
+        document.getElementById("myBtn2").addEventListener("click", displayInfo);
+
+        function displayInfo() {
+
+            document.getElementById('myimg').style.visibility = "hidden";
+
+            // var image = document.createElement('img');
+            // image.src ='../DomExample/images/file.jpg';
+            // image.alt = "image file";
+           
+
+            // document.getElementById("content").innerHTML = image;
+            
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
