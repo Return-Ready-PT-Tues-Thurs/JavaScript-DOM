@@ -30,4 +30,4 @@ function clickMe() {
       x.style.display = "none";
       button.innerHTML = "Show Me!";
     }
-  }
+}
