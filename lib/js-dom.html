@@ -8,9 +8,21 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
   </head>
     <body>
-        <p id="p1"></p>
-        <p id="p2"></p>  
+        <p id="first">We are coders!</p> 
+        <p><button onclick="myFunction()">Click Me To Change Text!</button></p>
+        <p id="second"></p>  
+        <script src="./main.js"></script>
 
+        <script>
+        function myFunction() {
+            var first = document.getElementById("first");
+            if (first.innerHTML === "We are coders!") {
+              first.innerHTML = "Developers for life!";
+            } else {
+              first.innerHTML = "We are coders!";
+            }
+          }
+        </script>  
     </body>
 
   </html>
