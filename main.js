@@ -3,6 +3,7 @@ let fave = document.querySelector('#fave');
 let home = document.querySelector("#home");
 let fact = document.querySelector('#fact');
 let listColor = document.querySelectorAll('li');
+let image = document.createElement('img');
 
 document.querySelector("body").style.fontFamily = "Arial, sans-serif";
 
@@ -14,3 +15,6 @@ fact.innerHTML = "I have an annoying cat";
 for( let i=0; i < listColor.length; i++){
     listColor[i].style.color = "lightblue";
 }
+
+image.src = "profile.jpg";
+document.body.appendChild(image);
