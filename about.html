@@ -9,9 +9,7 @@
  <script>
      let title = document.querySelector("title");
      title.textContent = "About Me";
-
      let ul = document.createElement("UL");
-     //let li = document.createElement("LI");
      document.body.appendChild(ul);
      let aboutMe = ["Nickname: booboo", "Favorites: music, pizza, The Office", "Hometown: Wilmington", "Random Fact: Black is my favorite color"];
      for(i=0;i<aboutMe.length;i++){
@@ -19,8 +17,13 @@
         li.textContent=aboutMe[i];
         ul.appendChild(li);
      }
+    //  for(i=0;i<aboutMe.length;i++){
+    //     let span = document.createElement("SPAN");
+        
+    //     document.ul.appendChild(span)
+    //  }
 
-
- </script>   
+ </script> 
+ <script src="main.js"></script>
 </body>
 </html>
