@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let p1= document.createElement("P");
+        let p2 = document.createElement("P");
+        p1.setAttribute("id", "paragraph1");
+        p2.setAttribute("id", "paragraph2");
+        p1.textContent = "We are coders!";
+        p2.textContent = "We are coders!";
+        document.body.appendChild(p1);
+        document.body.appendChild(p2);
+        document.getElementById("paragraph1").textContent= "We are Developers!";
+
+        let img = document.createElement("img");
+        img.src = "https://www.wilmingtonde.gov/Home/ShowPublishedImage/2524/636504239673830000";
+        console.log(img);
+        document.body.appendChild(img);
+        img.style.display = "block";
+
+        p1.style.color = "red";
+        p2.style.color = "red";
+
+        p1.style.fontSize = "2.5em";
+
+        const toggleButton = document.createElement("BUTTON");
+        document.body.appendChild(toggleButton);
+        toggleButton.style.display = "block";
+
+        toggleButton.addEventListener("click", () => {
+            if (img.style.display == "block") {
+                console.log(img.style.display);
+                img.style.display = "none";
+                //console.log(img.style.display);
+                toggleButton.textContent = "Show image";
+            } else {
+                console.log(img.style.display);
+                img.style.display = "block";
+                toggleButton.textContext = "Hide image";
+            }
+        });
+    </script>
+</body>
+</html>
