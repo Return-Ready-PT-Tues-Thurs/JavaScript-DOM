@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+     let title = document.querySelector("title");
+     title.textContent = "About Me";
+
+     let ul = document.createElement("UL");
+     //let li = document.createElement("LI");
+     document.body.appendChild(ul);
+     let aboutMe = ["Nickname: booboo", "Favorites: music, pizza, The Office", "Hometown: Wilmington", "Random Fact: Black is my favorite color"];
+     for(i=0;i<aboutMe.length;i++){
+        let li = document.createElement("LI"); 
+        li.textContent=aboutMe[i];
+        ul.appendChild(li);
+     }
+
+
+ </script>   
+</body>
+</html>
