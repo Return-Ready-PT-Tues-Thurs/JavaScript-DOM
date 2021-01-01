@@ -17,11 +17,14 @@
         li.textContent=aboutMe[i];
         ul.appendChild(li);
      }
-    //  for(i=0;i<aboutMe.length;i++){
-    //     let span = document.createElement("SPAN");
-        
-    //     document.ul.appendChild(span)
-    //  }
+     for(i=0;i<aboutMe.length;i++){
+        li = document.querySelectorAll("li");
+        let div = document.createElement("div");
+        li[i].parentNode.insertBefore(div, li[i]);
+        div.appendChild(li[i]);
+        div.setAttribute("id", "div"+i);
+        console.log(li[i]);
+     }
 
  </script> 
  <script src="main.js"></script>
