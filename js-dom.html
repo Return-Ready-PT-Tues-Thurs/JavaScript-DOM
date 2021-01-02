@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
 </head>
 <body>
-    <p id="Myheaders">We are coders</p>
-    <p id="Mysecondheader">Developers for life!</p>
-
+  <p id="myP">We are coders</h2>
+  <p id="myP2">Developers for life!</p>
+  
+  <br>
+  
+  <button type="button" onclick="myFunction()">Set text color</button>
+  
+  <script>
+  function myFunction() {
+    document.getElementById("myP").style.color = "blue";
+    document.getElementById("myP2").style.color = "orange";
     
+  }
+  </script>
+  
     
 </body>
 
