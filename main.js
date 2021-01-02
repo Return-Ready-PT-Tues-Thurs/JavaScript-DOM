@@ -1,14 +1,14 @@
 window.addEventListener("load", (event) => {
     /*Style font on window load*/
     document.querySelector("body").style.fontFamily = "Arial, sans-serif";
-    /*Add image of bridge on window load*/
+    /*Add image on window load*/
     let image = document.createElement("img");
     image.src = "images/ratio3x2_1200.jpg";
     document.body.appendChild(image);
     /*create image on window load*/
     let picOfMe = document.createElement("img");
     image.src = "images/IMG_0285.JPG";
-    document.image.appendChild(picOfMe);
+    document.body.appendChild(picOfMe);
 });
 
 
