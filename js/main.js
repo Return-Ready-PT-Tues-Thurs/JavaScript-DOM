@@ -5,12 +5,14 @@ window.addEventListener("load", (event) => {
     /*Add image on window load*/
     let image = document.createElement("img");
     image.src = "images/ratio3x2_1200.jpg";
+    image.alt = "San Francisco Bay Bridge";
     document.body.appendChild(image);
     
     
     /*Create image on window load*/
     let picOfMe = document.createElement("img");
     picOfMe.src = "images/IMG_0285.JPG";
+    picOfMe.alt = "Picture of Katharyn Lynn Oggenfuss";
     document.body.append(picOfMe);
 });
 
