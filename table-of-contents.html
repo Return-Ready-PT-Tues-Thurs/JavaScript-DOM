@@ -24,15 +24,16 @@
         <h3>Eggplant</h3>
     </div>
     <script>
-        //prepend div to use available toc code on codepen
+        /*prepend div to use available toc code on codepen*/
         let div = document.createElement("DIV");
             document.body.prepend(div);
-        //set attributes of divs to use available toc code on codepen
+            
+        /*set attributes of divs to use available toc code on codepen*/
         document.getElementsByTagName("div")[0].setAttribute("id", "console" );
         document.getElementsByTagName("div")[1].setAttribute("id", "toc");
         document.getElementsByTagName("div")[2].setAttribute("id", "contents");
-        //use toc code from codepen
-
+        
+        /*/use toc code from codepen*/
         var c = function() {
             return({
                 log: function(msg) {

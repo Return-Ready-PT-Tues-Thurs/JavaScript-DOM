@@ -7,26 +7,32 @@
 </head>
 <body>
  <script>
+     /*Add new title to page*/
      let title = document.querySelector("title");
      title.textContent = "About Me";
+
+    /*Add this code and text to webpage*/
      let ul = document.createElement("UL");
      document.body.appendChild(ul);
      let aboutMe = ["Nickname: booboo", "Favorites: music, pizza, The Office", "Hometown: Wilmington", "Random Fact: Black is my favorite color"];
+  
      for(i=0;i<aboutMe.length;i++){
         let li = document.createElement("LI"); 
         li.textContent=aboutMe[i];
         ul.appendChild(li);
      }
+
+     /*Add span element and give each span an id*/
      for(i=0;i<aboutMe.length;i++){
         li = document.querySelectorAll("li");
-        let div = document.createElement("div");
-        li[i].parentNode.insertBefore(div, li[i]);
-        div.appendChild(li[i]);
-        div.setAttribute("id", "div"+i);
+        let span = document.createElement("span");
+        li[i].parentNode.insertBefore(span, li[i]);
+        span.appendChild(li[i]);
+        span.setAttribute("id", "span"+i);
         console.log(li[i]);
      }
 
  </script> 
- <script src="main.js"></script>
+ <script src="js/main.js"></script>
 </body>
 </html>
