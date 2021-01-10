@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Dom HTML</title>
+</head>
+<body>
+    <script>
+        /*Created two paragraph elements and set their attributes*/
+        let p1= document.createElement("P");
+        let p2 = document.createElement("P");
+        p1.setAttribute("id", "paragraph1");
+        p2.setAttribute("id", "paragraph2");
+        
+        /*Set paragraph text content*/
+        p1.textContent = "We are coders!";
+        p2.textContent = "We are coders!";
+
+        /*Appended paragraphs to body*/
+        document.body.appendChild(p1);
+        document.body.appendChild(p2);
+
+        /*Changed paragraph 1 text content*/
+        document.getElementById("paragraph1").textContent= "We are Developers!";
+
+        /*Added image to document*/
+        let img = document.createElement("img");
+        img.src = "https://www.wilmingtonde.gov/Home/ShowPublishedImage/2524/636504239673830000";
+        img.alt = "Downtown Wilmington, Delaware";
+        document.body.appendChild(img);
+        img.style.display = "block";
+
+        /*Changed script color of paragraphs and font size of paragraph 1*/
+        p1.style.color = "red";
+        p2.style.color = "red";
+        p1.style.fontSize = "2.5em";
+
+        /*Created toggle button to toggle image*/
+        const toggleButton = document.createElement("BUTTON");
+        document.body.appendChild(toggleButton);
+        toggleButton.style.display = "block";
+        toggleButton.textContent = "Hide image";
+
+        /*If image is shown, toggle button to hide image, else toggle button to show itmage*/
+        toggleButton.addEventListener("click", () => {
+            if (img.style.display == "block") {
+                console.log(img.style.display);
+                img.style.display = "none";
+                toggleButton.textContent = "Show image";
+            } else {
+                console.log(img.style.display);
+                img.style.display = "block";
+                toggleButton.textContent = "Hide image";
+            }
+        });
+    </script>
+
+
+</body>
+</html>

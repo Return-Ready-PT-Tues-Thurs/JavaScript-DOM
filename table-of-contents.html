@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <h3>Table of Contents</h3>
+    </div>
+    <hr/>
+    <div >
+        <h1>Fruits</h1>
+        <h2>Red Fruits</h2>
+        <h3>Apple</h3>
+        <h3>Raspberry</h3>
+        <h2>Orange Fruits</h2>
+        <h3>Orange</h3>
+        <h3>Tangerine</h3>
+        <h1>Vegetables</h1>
+        <h2>Vegetables Which Are Actually Fruits</h2>
+        <h3>Tomato</h3>
+        <h3>Eggplant</h3>
+    </div>
+    <script>
+        /*prepend div to use available toc code on codepen*/
+        let div = document.createElement("DIV");
+            document.body.prepend(div);
+            
+        /*set attributes of divs to use available toc code on codepen*/
+        document.getElementsByTagName("div")[0].setAttribute("id", "console" );
+        document.getElementsByTagName("div")[1].setAttribute("id", "toc");
+        document.getElementsByTagName("div")[2].setAttribute("id", "contents");
+        
+        /*/use toc code from codepen*/
+        var c = function() {
+            return({
+                log: function(msg) {
+                consoleDiv = document.getElementById('console');
+                para = document.createElement('p');
+                text = document.createTextNode(msg);
+                para.appendChild(text);
+                consoleDiv.appendChild(para);
+                }
+            });
+        }();
+
+        window.onload = function () {
+            var toc = "";
+            var level = 0;
+            var maxLevel = 3;
+
+            document.getElementById("contents").innerHTML =
+                document.getElementById("contents").innerHTML.replace(
+                    /<h([\d])>([^<]+)<\/h([\d])>/gi,
+                    function (str, openLevel, titleText, closeLevel) {
+                        if (openLevel != closeLevel) {
+                        c.log(openLevel)
+                            return str + ' - ' + openLevel;
+                        }
+
+                        if (openLevel > level) {
+                            toc += (new Array(openLevel - level + 1)).join("<ol>");
+                        } else if (openLevel < level) {
+                            toc += (new Array(level - openLevel + 1)).join("</ol>");
+                        }
+
+                        level = parseInt(openLevel);
+
+                        var anchor = titleText.replace(/ /g, "_");
+                        toc += "<li><a href=\"#" + anchor + "\">" + titleText
+                            + "</a></li>";
+
+                        return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                            + titleText + "</a></h" + closeLevel + ">";
+                    }
+                );
+
+            if (level) {
+                toc += (new Array(level + 1)).join("</ol>");
+            }
+
+            document.getElementById("toc").innerHTML += toc;
+        };
+        
+    </script>
+</body>
+</html>
