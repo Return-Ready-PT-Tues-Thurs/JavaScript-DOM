@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>About me</title>
 </head>
+         <h1>About me</h1>
 <body>
-    
+
+    <img src="image/myself.jpg.jpg" alt ="My Photo" width="250" height="250">
+
+    <ul class ="about-me">
+        <li>Nickname: <span id="nickname"></span>coopcool</li>
+        <li>Favorites: <span id="favorites"></span>House music, Italian food, Seinfeld</li>
+        <li>Hometown: <span id="hometown"></span>Brooklyn, New York</li>
+        <li>Random Fact: <span id="random-fact"></span>I like new sports cars.</li>
+    </ul>
+
+    <button type="button" onclick="myFunction(li)">Set font</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("nickname").style.fontFamily = "Arial,sans-serif";
+            document.getElementById("favorites").style.fontFamily = "Arial,sans-serif";
+            document.getElementById("hometown").style.fontFamily = "Arial,sans-serif";
+            document.getElementById("random-fact").style.fontFamily = "Arial,sans-serif";
+}
+        </script>
+        
+
 </body>
+    <script src="main.js"></script>
+
 </html>
