@@ -14,3 +14,10 @@ let liText = document.querySelectorAll("li");
 for (let i = 0; i < liText.length; i++) {
   liText[i].style.color = "#0E497C";
 }
+
+let x = document.createElement("img");
+x.setAttribute("src", "./img/Myphoto.JPG");
+x.setAttribute("width", "304");
+x.setAttribute("height", "228");
+x.setAttribute("alt", "photo of me");
+document.body.appendChild(x);
