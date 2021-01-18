@@ -8,28 +8,24 @@
   <body>
     <p id="firstParagraph"></p>
     <p id="secondParagraph"></p>
-    <p></p>
-    <img src="" alt="" class="src">
 
+    
     <script>
-      //document.getElementById("firstParagraph").innerHTML = "We are coders!";
-      // document.querySelectorAll("p").innerHTML = "We are coders!";
-      //document.getElementsByTagName("p").innerHTML = "We are coders!";
-      //.innerHTML = "We are coders!";
-      //for (let i = 0; i < p.length; i++)
-      // document.querySelectorAll("p")[i].innerHTML = "We are coders!";
-      document.getElementById("firstParagraph").innerHTML = "We are coders!";
-      document.getElementById("secondParagraph").innerHTML = "We are coders!";
+      let firstText = document.querySelectorAll("p");
 
-      document.getElementById("firstParagraph").innerHTML =
-        "Developers for life!";
+      for (let i = 0; i < firstText.length; i++) {
+        firstText[i].textContent = "We are coders!";
+      }
 
-        const image = document.createElement('img')
+      let secondText = document.getElementById("firstParagraph");
+      secondText.innerHTML = "Developers for life!";
 
-
-
-
-
+      let x = document.createElement("img");
+      x.setAttribute("src", "./lib/images/laptop.svg");
+      x.setAttribute("width", "304");
+      x.setAttribute("height", "228");
+      x.setAttribute("alt", "laptop");
+      document.body.appendChild(x);
     </script>
   </body>
 </html>
