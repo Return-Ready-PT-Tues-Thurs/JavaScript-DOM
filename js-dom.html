@@ -9,7 +9,6 @@
     <p id="firstParagraph"></p>
     <p id="secondParagraph"></p>
 
-    
     <script>
       let firstText = document.querySelectorAll("p");
 
@@ -26,6 +25,13 @@
       x.setAttribute("height", "228");
       x.setAttribute("alt", "laptop");
       document.body.appendChild(x);
+
+      let bodyText = document.querySelectorAll("body");
+      for (let i = 0; i < bodyText.length; i++) {
+        bodyText[i].style.color = "tomato";
+      }
+
+      document.getElementById("firstParagraph").style.fontSize = "40px";
     </script>
   </body>
 </html>
