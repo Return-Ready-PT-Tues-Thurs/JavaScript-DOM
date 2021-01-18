@@ -8,3 +8,9 @@ document.getElementById("favorites").textContent =
 document.getElementById("hometown").textContent = "Hometown: New Castle";
 document.getElementById("randomFact").textContent =
   "Random Fact: Red is my favorite color.";
+
+//Change the `<li>` style to a color of your choosing. Cannot be black.
+let liText = document.querySelectorAll("li");
+for (let i = 0; i < liText.length; i++) {
+  liText[i].style.color = "#0E497C";
+}
