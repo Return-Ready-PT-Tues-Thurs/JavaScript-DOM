@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruits and Vegetables</title>
+  </head>
+  <body>
+    <div id="firdiv">
+      <h3>Table of Contents</h3>
+    </div>
+    <hr />
+
+    <div id="secdiv">
+      <h1>Fruits</h1>
+      <h2>Red Fruits</h2>
+      <h3>Apple</h3>
+      <h3>Raspberry</h3>
+      <h2>Orange Fruits</h2>
+      <h3>Orange</h3>
+      <h3>Tangerine</h3>
+      <h1>Vegetables</h1>
+      <h2>Vegetables Which Are Actually Fruits</h2>
+      <h3>Tomato</h3>
+      <h3>Eggplant</h3>
+    </div>
+
+    <script>
+      /*
+      3. Add a script to the HTML document that iterates through the elements and creates a table 
+      of contents. The table of contents should be at the top of the webpage. 
+      */
+
+      let textTOC = "";
+
+      let headerlength = document
+        .getElementById("secdiv")
+        .getElementsByTagName("h2").length;
+
+      for (let i = 0; i < headerlength; i++) {
+        const getHeader = document
+          .getElementById("secdiv")
+          .getElementsByTagName("h2")[i].textContent;
+        document
+          .getElementById("secdiv")
+          .getElementsByTagName("h2")
+          [i].setAttribute("id", "point" + i);
+        textTOC = "<li><a href='#point" + i + "'>" + getHeader + "</a></li>";
+        document.getElementById("firdiv").innerHTML += textTOC;
+      }
+    </script>
+  </body>
+</html>

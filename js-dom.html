@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="firstParagraph"></p>
+    <p id="secondParagraph"></p>
+
+    <button onclick="removeImage()">Remove Image</button>
+
+    <script>
+      let firstText = document.querySelectorAll("p");
+
+      // Write a script to add "We are coders!" to the `<p>` element.
+      for (let i = 0; i < firstText.length; i++) {
+        firstText[i].textContent = "We are coders!";
+      }
+
+      //Find the *first* `<p>` element and change its text to "Developers for life!"
+      let secondText = document.getElementById("firstParagraph");
+      secondText.innerHTML = "Developers for life!";
+
+      //Add an image to the HTML document using DOM methods
+      let x = document.createElement("img");
+      x.setAttribute("src", "./lib/images/laptop.svg");
+      x.setAttribute("width", "304");
+      x.setAttribute("height", "228");
+      x.setAttribute("alt", "laptop");
+      document.body.appendChild(x);
+
+      //Write a script to change the color of the text from black to your favorite color
+      let bodyText = document.querySelectorAll("body");
+      for (let i = 0; i < bodyText.length; i++) {
+        bodyText[i].style.color = "tomato";
+      }
+
+      //Add a script to change the font size of the first `<p>` element to `40px`
+      document.getElementById("firstParagraph").style.fontSize = "40px";
+
+      //Add a script that hides the image when the button is clicked
+      function removeImage() {
+        var elmnt = document.getElementsByTagName("img");
+        elmnt[0].style.display = "none";
+      }
+    </script>
+  </body>
+</html>
