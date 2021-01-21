@@ -21,3 +21,4 @@ x.setAttribute("width", "304");
 x.setAttribute("height", "228");
 x.setAttribute("alt", "photo of me");
 document.body.appendChild(x);
+
